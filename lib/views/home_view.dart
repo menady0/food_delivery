@@ -13,10 +13,81 @@ class HomeView extends StatelessWidget {
       drawer: Drawer(
         child: Center(child: Text('Center in Drawer')),
       ),
-      body: Column(
-        children: [
-          
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: Image.asset(
+                'assets/images/classic_burger.jpg',
+                height: 240,
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: GridView(
+                gridDelegate:
+                    SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 20,
+                      crossAxisSpacing: 20,
+                    ),
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius:
+                          BorderRadius.circular(16),
+                    ),
+                    child: Column(
+                      children: [
+                        Placeholder(
+                          fallbackHeight: 50,
+                        ),
+                        Text('Burger'),
+                        Text('5\$'),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius:
+                          BorderRadius.circular(16),
+                    ),
+                    child: Column(
+                      children: [
+                        Placeholder(
+                          fallbackHeight: 50,
+                        ),
+                        Text('Burger'),
+                        Text('5\$'),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius:
+                          BorderRadius.circular(16),
+                    ),
+                    child: Column(
+                      children: [
+                        Placeholder(
+                          fallbackHeight: 50,
+                        ),
+                        Text('Burger'),
+                        Text('5\$'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
