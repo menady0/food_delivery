@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/views/bottm_navbar_view.dart';
 import 'package:food_delivery/views/home_view.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.deepPurple,
         ),
       ),
-      home: HomeView(),
+      home: BottmNavbarView(),
     );
   }
 }
