@@ -10,19 +10,21 @@ class HomeView extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(24),
-            child: Image.asset(
-              'assets/images/classic_burger.jpg',
-              height: size.height * 0.35,
-              fit: BoxFit.cover,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: Image.asset(
+                'assets/images/classic_burger.jpg',
+                height: size.height * 0.35,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          SizedBox(height: 20),
-          Expanded(
-            child: GridView.builder(
+            SizedBox(height: 20),
+            GridView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
@@ -31,10 +33,10 @@ class HomeView extends StatelessWidget {
                   ),
               itemCount: foods.length,
               itemBuilder: (context, index) =>
-                  FoodItem(item: foods[index]),
+                  FoodItem(foodIndex: index),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

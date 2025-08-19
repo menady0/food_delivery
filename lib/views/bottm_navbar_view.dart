@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/views/favorite_view.dart';
 import 'package:food_delivery/views/home_view.dart';
 
 class BottmNavbarView extends StatefulWidget {
@@ -15,6 +16,12 @@ class _BottmNavbarViewState
   void updateIndex(int index) {
     setState(() => _selectedIndex = index);
   }
+
+  List<Widget> views = [
+    HomeView(),
+    FavoriteView(),
+    Center(child: Text('Account Page')),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +52,7 @@ class _BottmNavbarViewState
         onTap: updateIndex,
         selectedItemColor: Colors.orange,
       ),
-      body: HomeView(),
+      body: views[_selectedIndex],
     );
   }
 }
