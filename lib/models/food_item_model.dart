@@ -32,7 +32,6 @@ List<FoodItemModel> foods = [
         'https://raw.githubusercontent.com/menady0/food_delivery/refs/heads/master/assets/images/burger.png',
     title: 'Classic Beef Burger',
     price: 8.99,
-    isFavorite: true,
   ),
   FoodItemModel(
     imgUrl:
