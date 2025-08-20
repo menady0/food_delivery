@@ -8,15 +8,17 @@ void main() {
 class FoodApp extends StatelessWidget {
   const FoodApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Foodak - Food delivery',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+        primaryColor: Colors.deepOrange,
+        dividerTheme: DividerThemeData(
+          thickness: 2,
+          indent: 20,
+          endIndent: 20,
         ),
       ),
       home: BottmNavbarView(),

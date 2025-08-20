@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/views/account_view.dart';
 import 'package:food_delivery/views/favorite_view.dart';
 import 'package:food_delivery/views/home_view.dart';
 
@@ -20,7 +21,7 @@ class _BottmNavbarViewState
   List<Widget> views = [
     HomeView(),
     FavoriteView(),
-    Center(child: Text('Account Page')),
+    AccountView(),
   ];
 
   @override
@@ -50,7 +51,9 @@ class _BottmNavbarViewState
         ],
         currentIndex: _selectedIndex,
         onTap: updateIndex,
-        selectedItemColor: Colors.orange,
+        selectedItemColor: Theme.of(
+          context,
+        ).primaryColor,
       ),
       body: views[_selectedIndex],
     );

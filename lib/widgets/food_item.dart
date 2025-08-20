@@ -56,7 +56,7 @@ class _FoodItemState extends State<FoodItem> {
                                 .isFavorite
                             ? Icons.favorite
                             : Icons.favorite_border,
-                        color: Colors.deepOrange,
+                        color: Theme.of(context).primaryColor,
                       ),
                     ),
                   ),
