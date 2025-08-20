@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/views/bottm_navbar_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const FoodApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FoodApp extends StatelessWidget {
+  const FoodApp({super.key});
 
   // This widget is the root of your application.
   @override
